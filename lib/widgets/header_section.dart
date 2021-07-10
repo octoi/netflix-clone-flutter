@@ -14,26 +14,25 @@ class HeaderSection extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
-                'https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/stranger-things-21.jpg',
+                'https://thenationroar.com/wp-content/uploads/2020/01/Stranger-Things-Monster-Cover-1200x676-1.png',
               ),
               fit: BoxFit.cover,
             ),
           ),
         ),
-        Positioned(
-          top: 0,
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Image(
+        SafeArea(
+          child: Positioned(
+            top: 0.0,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 15.0),
+              child: Row(
+                children: [
+                  Image(
                     image: NetworkImage(netflixLogo),
                     width: 15.0,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         )
