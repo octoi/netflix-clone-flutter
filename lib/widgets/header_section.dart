@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/utils/constants.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({Key? key}) : super(key: key);
@@ -19,6 +20,23 @@ class HeaderSection extends StatelessWidget {
             ),
           ),
         ),
+        Positioned(
+          top: 0,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Image(
+                    image: NetworkImage(netflixLogo),
+                    width: 15.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }
