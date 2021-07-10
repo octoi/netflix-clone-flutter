@@ -10,7 +10,7 @@ class HeaderSection extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 500.0,
+          height: 600.0,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
@@ -21,7 +21,7 @@ class HeaderSection extends StatelessWidget {
           ),
         ),
         Container(
-          color: appPrimaryColor.withOpacity(0.3),
+          color: appPrimaryColor.withOpacity(0.4),
           padding: EdgeInsets.only(bottom: 10.0),
           child: SafeArea(
             child: Positioned(
@@ -61,6 +61,54 @@ class HeaderSection extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+        ),
+        Positioned(
+          bottom: 0.0,
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.add),
+                color: appPrimaryTextColor,
+                iconSize: 30.0,
+              ),
+              TextButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith(
+                    (states) => appPrimaryTextColor,
+                  ),
+                  overlayColor: MaterialStateProperty.resolveWith(
+                    (states) => appSecondaryTextColor.withOpacity(0.1),
+                  ),
+                  padding: MaterialStateProperty.resolveWith(
+                    (states) => EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 20.0,
+                    ),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.play_arrow,
+                      color: appPrimaryColor,
+                    ),
+                    Text(
+                      "Play",
+                      style: TextStyle(color: appPrimaryColor),
+                    ),
+                  ],
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.info_outlined),
+                color: appPrimaryTextColor,
+                iconSize: 28.0,
+              ),
+            ],
           ),
         )
       ],
