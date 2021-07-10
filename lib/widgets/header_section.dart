@@ -20,18 +20,45 @@ class HeaderSection extends StatelessWidget {
             ),
           ),
         ),
-        SafeArea(
-          child: Positioned(
-            top: 0.0,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 15.0),
-              child: Row(
-                children: [
-                  Image(
-                    image: NetworkImage(netflixLogo),
-                    width: 15.0,
-                  ),
-                ],
+        Container(
+          color: appPrimaryColor.withOpacity(0.3),
+          padding: EdgeInsets.only(bottom: 10.0),
+          child: SafeArea(
+            child: Positioned(
+              top: 0.0,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image(
+                      image: NetworkImage(netflixLogo),
+                      width: 15.0,
+                    ),
+                    SizedBox(width: 20.0),
+                    Text(
+                      'TV Show',
+                      style: TextStyle(
+                        color: appPrimaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'Movies',
+                      style: TextStyle(
+                        color: appPrimaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'My List',
+                      style: TextStyle(
+                        color: appPrimaryTextColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
