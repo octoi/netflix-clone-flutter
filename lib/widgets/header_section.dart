@@ -118,7 +118,25 @@ class HeaderSection extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
+        Positioned(
+          left: 0,
+          right: 0,
+          bottom: -60,
+          child: Container(
+            height: 100.0,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  appPrimaryColor.withOpacity(0.1),
+                  appSecondaryTextColor,
+                ],
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
