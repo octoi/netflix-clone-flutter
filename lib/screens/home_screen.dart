@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/utils/constants.dart';
+import 'package:netflix/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -48,18 +49,7 @@ class HomeScreen extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: 500.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    'https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/stranger-things-21.jpg',
-                  ),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            )
+            HeaderSection(),
           ],
         ),
       ),
