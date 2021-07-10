@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/screens/home_screen.dart';
 
 void main() {
   runApp(Netflix());
@@ -11,7 +12,7 @@ class Netflix extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(),
+      home: HomeScreen(),
     );
   }
 }
