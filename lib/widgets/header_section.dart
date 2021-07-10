@@ -64,51 +64,59 @@ class HeaderSection extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: 0.0,
-          child: Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.add),
-                color: appPrimaryTextColor,
-                iconSize: 30.0,
-              ),
-              TextButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.resolveWith(
-                    (states) => appPrimaryTextColor,
-                  ),
-                  overlayColor: MaterialStateProperty.resolveWith(
-                    (states) => appSecondaryTextColor.withOpacity(0.1),
-                  ),
-                  padding: MaterialStateProperty.resolveWith(
-                    (states) => EdgeInsets.symmetric(
-                      vertical: 10.0,
-                      horizontal: 20.0,
+          bottom: 15.0,
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 15.0,
+              horizontal: 30.0,
+            ),
+            width: MediaQuery.of(context).size.width,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.add),
+                  color: appPrimaryTextColor,
+                  iconSize: 30.0,
+                ),
+                TextButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.resolveWith(
+                      (states) => appPrimaryTextColor,
                     ),
+                    overlayColor: MaterialStateProperty.resolveWith(
+                      (states) => appSecondaryTextColor.withOpacity(0.1),
+                    ),
+                    padding: MaterialStateProperty.resolveWith(
+                      (states) => EdgeInsets.symmetric(
+                        vertical: 10.0,
+                        horizontal: 20.0,
+                      ),
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.play_arrow,
+                        color: appPrimaryColor,
+                      ),
+                      Text(
+                        "Play",
+                        style: TextStyle(color: appPrimaryColor),
+                      ),
+                    ],
                   ),
                 ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.play_arrow,
-                      color: appPrimaryColor,
-                    ),
-                    Text(
-                      "Play",
-                      style: TextStyle(color: appPrimaryColor),
-                    ),
-                  ],
+                IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.info_outlined),
+                  color: appPrimaryTextColor,
+                  iconSize: 28.0,
                 ),
-              ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.info_outlined),
-                color: appPrimaryTextColor,
-                iconSize: 28.0,
-              ),
-            ],
+              ],
+            ),
           ),
         )
       ],
