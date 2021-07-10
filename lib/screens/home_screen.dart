@@ -8,6 +8,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: appPrimaryColor,
+      appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: appPrimaryColor,
+        leading: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Image(
+            image: NetworkImage(netflixLogo),
+          ),
+        ),
+      ),
     );
   }
 }
