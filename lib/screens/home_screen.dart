@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeaderSection(),
+            SizedBox(height: 20.0),
             ListSection(),
           ],
         ),
