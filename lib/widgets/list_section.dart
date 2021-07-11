@@ -7,6 +7,7 @@ class ListSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ItemList(title: "Popular On Netflix"),
         ItemList(title: "Trending Now"),

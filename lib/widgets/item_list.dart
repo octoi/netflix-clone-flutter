@@ -11,15 +11,11 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: 10.0),
         Text(title),
       ],
-      // SingleChildScrollView(
-      //     physics: BouncingScrollPhysics(),
-      //     scrollDirection: Axis.horizontal,
-      //     child: Row(children: getItems()),
-      //   )
     );
   }
 }
