@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/utils/constants.dart';
 
 class ItemList extends StatelessWidget {
   final String title;
@@ -10,12 +11,24 @@ class ItemList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: 10.0),
-        Text(title),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        vertical: 10.0,
+        horizontal: 8.0,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: appPrimaryTextColor,
+              fontSize: 18.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
