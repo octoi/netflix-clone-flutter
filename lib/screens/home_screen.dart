@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             HeaderSection(),
+            ListSection(),
           ],
         ),
       ),
